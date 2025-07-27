@@ -1,0 +1,171 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      4863,        162]
+NotebookOptionsPosition[      3893,        123]
+NotebookOutlinePosition[      4231,        138]
+CellTagsIndexPosition[      4188,        135]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Salary", "=", "115000"}], ";"}]], "Input",
+ CellChangeTimes->{{3.4446355740696077`*^9, 3.444635585493848*^9}, {
+  3.4446356194320917`*^9, 3.444635623470299*^9}, {3.444635721367795*^9, 
+  3.444635738356678*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ImpotsUK", "=", 
+  RowBox[{
+   RowBox[{"34800", "*", "0.2"}], "+", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"Salary", "-", "34800"}], ")"}], "*", "0.4"}]}]}]], "Input",
+ CellChangeTimes->{{3.444634971158855*^9, 3.444635030455813*^9}, {
+   3.444635232553981*^9, 3.4446352373939457`*^9}, 3.4446355938244247`*^9}],
+
+Cell[BoxData["39040.`"], "Output",
+ CellChangeTimes->{
+  3.4446349831013803`*^9, 3.444635033062531*^9, 3.444635238185058*^9, {
+   3.44463561352195*^9, 3.444635629181731*^9}, {3.444635729814373*^9, 
+   3.444635744772512*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ImpotsMensuel", "=", 
+  RowBox[{"N", "[", 
+   RowBox[{"39040", "/", "12"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.444635050004603*^9, 3.444635083404955*^9}, {
+  3.444635144630196*^9, 3.444635150349365*^9}}],
+
+Cell[BoxData["3253.3333333333335`"], "Output",
+ CellChangeTimes->{{3.4446350699134893`*^9, 3.444635085429944*^9}, 
+   3.444635153427073*^9, {3.444635613556271*^9, 3.444635629215706*^9}, {
+   3.444635729847603*^9, 3.444635744806493*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RevenubrutMensuel", "=", 
+  RowBox[{"N", "[", 
+   RowBox[{"Salary", "/", "12"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.444635102691587*^9, 3.444635121147509*^9}, {
+   3.444635157169194*^9, 3.444635164715562*^9}, 3.444635600776268*^9}],
+
+Cell[BoxData["9583.333333333334`"], "Output",
+ CellChangeTimes->{{3.44463511100916*^9, 3.4446351224747677`*^9}, 
+   3.444635165345312*^9, {3.4446356135886717`*^9, 3.444635629249159*^9}, {
+   3.4446357298795967`*^9, 3.444635744839818*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DisponibleMensuel", "=", 
+  RowBox[{"RevenubrutMensuel", "-", "ImpotsMensuel", "-", "800"}]}]], "Input",\
+
+ CellChangeTimes->{{3.444635174733493*^9, 3.44463518860334*^9}, {
+  3.444635248604472*^9, 3.4446352544500923`*^9}}],
+
+Cell[BoxData["5530.`"], "Output",
+ CellChangeTimes->{
+  3.4446351900041237`*^9, 3.444635256281926*^9, {3.444635613622839*^9, 
+   3.4446356292818213`*^9}, {3.444635729915133*^9, 3.444635744872943*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Onepounds", "=", "1.11757"}], ";"}]], "Input",
+ CellChangeTimes->{{3.444635402704936*^9, 3.444635427296218*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.444635218348415*^9, 3.444635228042687*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ImpotsUK", "*", "Onepounds"}]], "Input",
+ CellChangeTimes->{{3.4446354426494827`*^9, 3.44463544898592*^9}}],
+
+Cell[BoxData["43629.932799999995`"], "Output",
+ CellChangeTimes->{
+  3.444635449799156*^9, {3.4446356137034082`*^9, 3.444635629362722*^9}, {
+   3.444635729997974*^9, 3.444635744953493*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DisponibleMensuel", "*", "Onepounds"}]], "Input",
+ CellChangeTimes->{{3.444635461449561*^9, 3.444635468794026*^9}}],
+
+Cell[BoxData["6180.1621`"], "Output",
+ CellChangeTimes->{
+  3.444635469784333*^9, {3.444635613738686*^9, 3.444635629397122*^9}, {
+   3.444635730031447*^9, 3.4446357449899406`*^9}}]
+}, Open  ]]
+},
+WindowSize->{640, 708},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"7.0 for Mac OS X x86 (32-bit) (November 11, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 245, 5, 27, "Input"],
+Cell[CellGroupData[{
+Cell[815, 29, 337, 8, 27, "Input"],
+Cell[1155, 39, 224, 4, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1416, 48, 233, 5, 27, "Input"],
+Cell[1652, 55, 236, 3, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1925, 63, 261, 5, 27, "Input"],
+Cell[2189, 70, 238, 3, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2464, 78, 246, 5, 27, "Input"],
+Cell[2713, 85, 200, 3, 27, "Output"]
+}, Open  ]],
+Cell[2928, 91, 147, 3, 27, "Input"],
+Cell[3078, 96, 92, 1, 27, "Input"],
+Cell[CellGroupData[{
+Cell[3195, 101, 131, 2, 27, "Input"],
+Cell[3329, 105, 189, 3, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3555, 113, 139, 2, 27, "Input"],
+Cell[3697, 117, 180, 3, 27, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,355 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     11604,        346]
+NotebookOptionsPosition[     10861,        320]
+NotebookOutlinePosition[     11266,        337]
+CellTagsIndexPosition[     11223,        334]
+WindowFrame->Normal
+ContainsDynamic->False*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Supposons", " ", 
+  SubscriptBox["S", "T"], 
+  RowBox[{"(", "t", ")"}], "  ", "gaussien", " ", 
+  RowBox[{"d", "'"}], "ecart", " ", "type", " ", 
+  SubscriptBox["\[Sigma]", 
+   RowBox[{"T", " "}]], "et", " ", 
+  RowBox[{"d", "'"}], "esperance", " ", 
+  SubscriptBox["\[Mu]", "T"]}]], "Input",
+ CellChangeTimes->{{3.3949823783579865`*^9, 3.3949824307652426`*^9}, {
+  3.3949836223974967`*^9, 3.3949836489136305`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   SubscriptBox["E", "0"], "[", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       SubsuperscriptBox["\[Integral]", 
+        SubscriptBox["T", "1"], 
+        SubscriptBox["T", "2"]], 
+       RowBox[{
+        SubscriptBox["1", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["S", "T"], 
+           RowBox[{"(", "t", ")"}]}], ">", "K"}]], 
+        RowBox[{"\[DifferentialD]", "T"}]}]}], "-", 
+      SubscriptBox["K", "2"]}], ")"}], "+"], "]"}], "=", 
+  RowBox[{
+   UnderscriptBox["lim", 
+    RowBox[{"\[Tau]", "\[Rule]", "0"}]], 
+   RowBox[{"E", "[", 
+    RowBox[{
+     SubscriptBox["E", "\[Tau]"], "[", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         SubsuperscriptBox["\[Integral]", 
+          SubscriptBox["T", "1"], 
+          SubscriptBox["T", "2"]], 
+         RowBox[{
+          SubscriptBox["1", 
+           RowBox[{
+            RowBox[{
+             SubscriptBox["S", "T"], 
+             RowBox[{"(", "t", ")"}]}], ">", "K"}]], 
+          RowBox[{"\[DifferentialD]", "T"}]}]}], "-", 
+        SubscriptBox["K", "2"]}], ")"}], "+"], "]"}], 
+    "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"=", 
+  RowBox[{
+   RowBox[{
+    UnderscriptBox["lim", 
+     RowBox[{"\[Tau]", "\[Rule]", "0"}]], 
+    RowBox[{"E", "[", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["E", "\[Tau]"], "[", 
+         RowBox[{
+          SubsuperscriptBox["\[Integral]", 
+           SubscriptBox["T", "1"], 
+           SubscriptBox["T", "2"]], 
+          RowBox[{
+           SubscriptBox["1", 
+            RowBox[{
+             RowBox[{
+              SubscriptBox["S", "T"], 
+              RowBox[{"(", "t", ")"}]}], ">", "K"}]], 
+           RowBox[{"\[DifferentialD]", "T"}]}]}], "]"}], "-", 
+        SubscriptBox["K", "2"]}], ")"}], "+"], "]"}]}], "=", 
+   RowBox[{
+    RowBox[{
+     UnderscriptBox["lim", 
+      RowBox[{"\[Tau]", "\[Rule]", "0"}]], 
+     RowBox[{"E", "[", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SubsuperscriptBox["\[Integral]", 
+           SubscriptBox["T", "1"], 
+           SubscriptBox["T", "2"]], 
+          RowBox[{
+           RowBox[{
+            SubscriptBox["E", "\[Tau]"], "[", 
+            SubscriptBox["1", 
+             RowBox[{
+              RowBox[{
+               SubscriptBox["S", "T"], 
+               RowBox[{"(", "t", ")"}]}], ">", "K"}]], "]"}], 
+           RowBox[{"\[DifferentialD]", "T"}]}]}], "-", 
+         SubscriptBox["K", "2"]}], ")"}], "+"], "]"}]}], "=", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     UnderscriptBox["lim", 
+      RowBox[{"\[Tau]", "\[Rule]", "0"}]], 
+     RowBox[{"E", "[", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SubsuperscriptBox["\[Integral]", 
+           SubscriptBox["T", "1"], 
+           SubscriptBox["T", "2"]], 
+          RowBox[{
+           RowBox[{"-", 
+            RowBox[{
+             SubscriptBox["Call", "K"], "[", 
+             RowBox[{
+              RowBox[{
+               SubscriptBox["S", "T"], 
+               RowBox[{"(", "\[Tau]", ")"}]}], ",", 
+              SubscriptBox["\[Sigma]", "T"], ",", "K", ",", "T"}], "]"}]}], 
+           RowBox[{"\[DifferentialD]", "T"}]}]}], "-", 
+         SubscriptBox["K", "2"]}], ")"}], "+"], "]"}]}]}]}]}]}], "Input",
+ CellChangeTimes->{{3.3949819540842156`*^9, 3.394982116352956*^9}, {
+   3.394982217011139*^9, 3.3949823653733625`*^9}, {3.394982718567643*^9, 
+   3.394982718895775*^9}, {3.3949836577575502`*^9, 3.3949837237431927`*^9}, {
+   3.3949837668065195`*^9, 3.394983806338528*^9}, {3.3949838410266943`*^9, 
+   3.3949838782305336`*^9}, {3.395026640259903*^9, 3.3950266891827173`*^9}, 
+   3.3950268547640214`*^9, 3.3950271585354786`*^9}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.394982491203903*^9, 3.3949825918308353`*^9}, 
+   3.39498271708324*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Soit", " ", 
+   SubscriptBox["U", "\[Tau]"]}], "=", 
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", 
+    SubscriptBox["T", "1"], 
+    SubscriptBox["T", "2"]], 
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{
+      SubscriptBox["Call", "K"], "[", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["S", "T"], 
+        RowBox[{"(", "\[Tau]", ")"}]}], ",", 
+       SubscriptBox["\[Sigma]", "T"], ",", "K", ",", "T"}], "]"}]}], 
+    RowBox[{"\[DifferentialD]", "T"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.3949827397086744`*^9, 3.3949827741937113`*^9}, {
+   3.3949828577890663`*^9, 3.3949828584140787`*^9}, 3.394983892918316*^9, 
+   3.395026710104994*^9, 3.3950268489826603`*^9, 3.395027166520007*^9}],
+
+Cell[BoxData[
+ RowBox[{"on", " ", "peut", " ", "calculer", " ", "sa", " ", "dynamique", 
+  " "}]], "Input",
+ CellChangeTimes->{{3.394982794522227*^9, 3.3949828073505983`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["dU", "\[Tau]"], "=", " ", 
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", 
+    SubscriptBox["T", "1"], 
+    SubscriptBox["T", "2"]], 
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         SubscriptBox["Call", 
+          RowBox[{"K", ",", "S"}]], "[", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["S", "T"], 
+           RowBox[{"(", "\[Tau]", ")"}]}], ",", 
+          SubscriptBox["\[Sigma]", "T"], ",", "K", ",", "T"}], "]"}], 
+        SubscriptBox["dS", "T"], 
+        RowBox[{"(", "\[Tau]", ")"}]}], "+", 
+       RowBox[{
+        FractionBox["1", "2"], 
+        RowBox[{
+         SubscriptBox["Call", 
+          RowBox[{"K", ",", "S", ",", "S"}]], "[", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["S", "T"], 
+           RowBox[{"(", "\[Tau]", ")"}]}], ",", 
+          SubscriptBox["\[Sigma]", "T"], ",", "K", ",", "T"}], "]"}], 
+        "dt"}]}], ")"}]}], 
+    RowBox[{"\[DifferentialD]", "T"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.394982819569583*^9, 3.394982841570005*^9}, {
+   3.394982883664563*^9, 3.394982897758584*^9}, {3.3949829980105085`*^9, 
+   3.394983109950158*^9}, {3.3949839062935724`*^9, 3.3949839091842527`*^9}, {
+   3.3949839630915375`*^9, 3.394983989498295*^9}, 3.394984034780414*^9, {
+   3.3949840822813263`*^9, 3.3949840920002627`*^9}, {3.39498412651655*^9, 
+   3.394984127454068*^9}, {3.395026744136897*^9, 3.3950267810126057`*^9}, {
+   3.3950268438888125`*^9, 3.3950268461232305`*^9}, {3.395026888999054*^9, 
+   3.3950268961085653`*^9}, 3.395027174129528*^9}],
+
+Cell[BoxData[
+ RowBox[{"Sa", " ", "variance", " ", "instantan\[EAcute]e", " ", "est", " ", 
+  RowBox[{"donc", " ", ":", " ", 
+   RowBox[{"la", " ", "variance", " ", "de", " "}]}]}]], "Input",
+ CellChangeTimes->{{3.39498324106205*^9, 3.3949832691094637`*^9}, {
+  3.394983467925781*^9, 3.394983471097717*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubsuperscriptBox["\[Integral]", 
+   SubscriptBox["T", "1"], 
+   SubscriptBox["T", "2"]], 
+  RowBox[{
+   RowBox[{"-", 
+    RowBox[{
+     SubscriptBox["Call", 
+      RowBox[{"K", ",", "S"}]], "[", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["S", "T"], 
+       RowBox[{"(", "\[Tau]", ")"}]}], ",", 
+      SubscriptBox["\[Sigma]", "T"], ",", "K", ",", "T"}], "]"}]}], 
+   SubscriptBox["dS", "T"], 
+   RowBox[{"(", "\[Tau]", ")"}], 
+   RowBox[{"\[DifferentialD]", "T"}]}]}]], "Input",
+ CellChangeTimes->{{3.3949832854535275`*^9, 3.394983347095336*^9}, {
+   3.3949840603590307`*^9, 3.3949840769687243`*^9}, {3.3949841176882563`*^9, 
+   3.394984131532272*^9}, {3.3950268059193335`*^9, 3.3950268094194007`*^9}, 
+   3.395026841982526*^9, 3.3950271839422164`*^9}],
+
+Cell[BoxData[
+ RowBox[{"en", " ", "employant", " ", "une", " ", "densit\[EAcute]", " ", 
+  "de", " ", 
+  RowBox[{"correlation", ":"}]}]], "Input",
+ CellChangeTimes->{{3.394984147673207*^9, 3.394984158407788*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Vdt", "=", 
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", 
+    SubscriptBox["T", "1"], 
+    SubscriptBox["T", "2"]], 
+   RowBox[{
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["T", "a"]}], 
+    RowBox[{
+     SubsuperscriptBox["\[Integral]", 
+      SubscriptBox["T", "1"], 
+      SubscriptBox["T", "2"]], 
+     RowBox[{
+      RowBox[{"\[DifferentialD]", 
+       SubscriptBox["T", "b"]}], 
+      SubscriptBox["\[Rho]", 
+       RowBox[{
+        SubscriptBox["T", "a"], ",", 
+        SubscriptBox["T", "b"]}]], 
+      RowBox[{
+       SubscriptBox["Call", 
+        RowBox[{"K", ",", "S"}]], "[", 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["S", 
+          SubscriptBox["T", "a"]], 
+         RowBox[{"(", "\[Tau]", ")"}]}], ",", 
+        SubscriptBox["\[Sigma]", 
+         SubscriptBox["T", "a"]], ",", "K", ",", 
+        SubscriptBox["T", "a"]}], "]"}], 
+      RowBox[{
+       SubscriptBox["Call", 
+        RowBox[{"K", ",", "S"}]], "[", 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["S", 
+          SubscriptBox["T", "b"]], 
+         RowBox[{"(", "\[Tau]", ")"}]}], ",", 
+        SubscriptBox["\[Sigma]", 
+         SubscriptBox["T", "b"]], ",", "K", ",", 
+        SubscriptBox["T", "b"]}], "]"}], 
+      SubscriptBox["\[Sigma]", 
+       SubscriptBox["T", "a"]], 
+      SubscriptBox["\[Sigma]", 
+       SubscriptBox["T", "b"]], "dT"}]}]}]}]}]], "Input",
+ CellChangeTimes->{{3.3949841739080853`*^9, 3.394984350802107*^9}, {
+  3.394984678933407*^9, 3.3949847008400774`*^9}, {3.394984940250924*^9, 
+  3.3949849407665586`*^9}, {3.394985038815316*^9, 3.394985047768613*^9}, {
+  3.3950269417969427`*^9, 3.395027027048579*^9}, {3.3950270961592813`*^9, 
+  3.395027097003047*^9}, {3.395027193364272*^9, 3.3950272497091045`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"donc", " ", "sa", " ", "limite", " ", "est", " ", "equivalente", 
+  " ", "a", " "}]], "Input",
+ CellChangeTimes->{{3.3949850855505886`*^9, 3.3949851048322086`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.3949851138011312`*^9, 3.394985118394969*^9}, 
+   3.3950271063469768`*^9}]
+},
+WindowSize->{691, 692},
+WindowMargins->{{185, Automatic}, {Automatic, 14}},
+PrintingCopies->1,
+PrintingPageRange->{Automatic, Automatic},
+FrontEndVersion->"6.0 for Microsoft Windows (32-bit) (April 20, 2007)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[568, 21, 439, 10, 31, "Input"],
+Cell[1010, 33, 3801, 114, 127, "Input"],
+Cell[4814, 149, 119, 2, 31, "Input"],
+Cell[4936, 153, 730, 20, 48, "Input"],
+Cell[5669, 175, 175, 3, 31, "Input"],
+Cell[5847, 180, 1611, 41, 48, "Input"],
+Cell[7461, 223, 307, 5, 31, "Input"],
+Cell[7771, 230, 786, 21, 48, "Input"],
+Cell[8560, 253, 212, 4, 31, "Input"],
+Cell[8775, 259, 1766, 50, 48, "Input"],
+Cell[10544, 311, 188, 3, 31, "Input"],
+Cell[10735, 316, 122, 2, 31, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

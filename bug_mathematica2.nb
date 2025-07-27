@@ -1,0 +1,89 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      2522,         79]
+NotebookOptionsPosition[      2269,         66]
+NotebookOutlinePosition[      2611,         81]
+CellTagsIndexPosition[      2568,         78]
+WindowFrame->Normal
+ContainsDynamic->False*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NormalImplicitVol", "[", 
+   RowBox[{"F_", ",", "K_", ",", "T_", ",", "o_"}], "]"}], ":=", 
+  "\[IndentingNewLine]", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"ss", ",", "u", ",", "msg"}], "}"}], ",", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"o", "<", 
+       RowBox[{"F", "-", "K"}]}], ",", 
+      RowBox[{
+       RowBox[{"msg", "=", 
+        RowBox[{"Join", "[", 
+         RowBox[{"\"\<Intrinseq vale>option! Val. Intr.\>\"", ",", 
+          RowBox[{"ToString", "[", 
+           RowBox[{"F", "-", "K"}], "]"}], ",", "\"\< opt.=\>\"", ",", 
+          RowBox[{"ToString", "[", "o", "]"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Message", "[", 
+         RowBox[{
+          RowBox[{"NormalImplicitVol", "::", "OPTLESSVI"}], ",", "msg"}], 
+         "]"}], ":", 
+        RowBox[{"Throw", "[", "msg", "]"}]}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ss", "=", 
+        RowBox[{"FindRoot", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"NormalCall", "[", 
+            RowBox[{"F", ",", "u", ",", "K", ",", "T"}], "]"}], "\[Equal]", 
+           "o"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"u", ",", "0.2", ",", "0.0001", ",", "15"}], "}"}], ",", 
+          RowBox[{"AccuracyGoal", "\[Rule]", "8"}], ",", 
+          RowBox[{"MaxIterations", "\[Rule]", "200"}]}], "]"}]}], ";", 
+       RowBox[{"u", " ", "/.", " ", 
+        RowBox[{"ss", "[", 
+         RowBox[{"[", "1", "]"}], "]"}]}]}]}], "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.4159359274878025`*^9, 3.4159362221184597`*^9}, {
+  3.415936366543107*^9, 3.4159363672149954`*^9}}]
+},
+WindowSize->{616, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"6.0 for Microsoft Windows (32-bit) (February 7, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[568, 21, 1697, 43, 172, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

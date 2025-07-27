@@ -1,0 +1,737 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     24817,        728]
+NotebookOptionsPosition[     23274,        680]
+NotebookOutlinePosition[     23616,        695]
+CellTagsIndexPosition[     23573,        692]
+WindowFrame->Normal
+ContainsDynamic->False*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Determination du portefeuille de calibration", "Title",
+ CellChangeTimes->{{3.3902782314897847`*^9, 3.39027824163054*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "Soit", " ", "une", " ", "famille", " ", "de", " ", "processus", " ", 
+   SubscriptBox["S", 
+    RowBox[{"a", " "}]], " ", "index\[EAcute]e", " ", "par", " ", "a"}], 
+  "\[Element]", 
+  RowBox[{"A", " ", "ensemple", " ", "de", " ", "parametres", " ", 
+   RowBox[{"admissible", "."}]}]}]], "Text",
+ CellChangeTimes->{{3.3902782809435425`*^9, 3.3902784257735214`*^9}, 
+   3.390278470352217*^9, {3.390278695042593*^9, 3.3902788030908513`*^9}, {
+   3.3902788371850376`*^9, 3.3902788485758085`*^9}, 3.390278886670046*^9, {
+   3.3902789208579836`*^9, 3.3902789472645717`*^9}, {3.3902789881557198`*^9, 
+   3.3902790810162835`*^9}, {3.390279111219795*^9, 3.3902791683924017`*^9}, {
+   3.390279201970957*^9, 3.390279218252415*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Soit", " ", "un", " ", 
+  StyleBox[
+   RowBox[{"i", 
+    StyleBox["ns",
+     FontFamily->"Courier New"], "trument"}]], " ", "a", " ", "pricer", "  ", 
+  "X", " ", "caracteris\[EAcute]", " ", "par", " ", "un", " ", "pay", " ", 
+  "off", "  ", "dependant", " ", "de", " ", "la", " ", "trajectoire", " ", 
+  "de", " ", 
+  SubscriptBox["S", 
+   RowBox[{"a", " "}]], " ", "d\[EAcute]crit", " ", "par", " ", "une", " ", 
+  "variable", " ", "aleatoire", " ", "P", "  ", "donc", " ", "fonctionnelle", 
+  " ", "de", " ", "la", " ", "trajectoire", " ", "de", " ", 
+  RowBox[{
+   SubscriptBox["S", "a"], "."}]}]], "Text",
+ CellChangeTimes->{{3.390279225893138*^9, 3.390279227283781*^9}, {
+  3.3902795835070906`*^9, 3.390279584178974*^9}}],
+
+Cell[TextData[{
+ StyleBox["Soit in certain nombre d' instrument de couverture et de \
+calibration ",
+  FontFamily->"Courier New"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "i"], TraditionalForm]]],
+ StyleBox[" index\[EAcute] par i",
+  FontFamily->"Courier New"],
+ "\[Element]",
+ StyleBox["I et de payoff decrit par des fonctionnelles ",
+  FontFamily->"Courier New"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "i"], TraditionalForm]]],
+ " ",
+ StyleBox["de ",
+  FontFamily->"Courier New"],
+ Cell[BoxData[
+  SubscriptBox["S", 
+   RowBox[{"a", " "}]]],
+  CellChangeTimes->{{3.3902782809435425`*^9, 3.3902784257735214`*^9}, 
+    3.390278470352217*^9, {3.390278695042593*^9, 3.3902788030908513`*^9}, {
+    3.3902788371850376`*^9, 3.3902788485758085`*^9}, 3.390278886670046*^9, {
+    3.3902789208579836`*^9, 3.3902789472645717`*^9}, {3.3902789881557198`*^9, 
+    3.3902790810162835`*^9}, {3.390279111219795*^9, 3.3902791683924017`*^9}, {
+    3.390279201970957*^9, 3.390279218252415*^9}}],
+ StyleBox[" .",
+  FontFamily->"Courier New"]
+}], "Text",
+ CellChangeTimes->{{3.3902793071910534`*^9, 3.3902794478022285`*^9}, 
+   3.3902795633662076`*^9, {3.3902795946791086`*^9, 3.39027959717914*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"La", " ", "calibration", " ", "de", " ", 
+    SubscriptBox["S", "a"], " ", "en", " ", "vue", " ", "de", " ", "pricer", 
+    " ", "X", " ", "est", " ", "donc", " ", "la", " ", "determination", " ", 
+    "de", " ", 
+    RowBox[{"l", "'"}], "element", " ", 
+    SuperscriptBox["a", "*"]}], "\[Element]", 
+   RowBox[{"A", "  ", "tel", " ", "que", " ", 
+    RowBox[{"E", "[", 
+     SubscriptBox["P", "i"], "]"}]}]}], " ", "=", 
+  RowBox[{
+   SubscriptBox["C", "i"], "   ", 
+   RowBox[{"(", " ", 
+    RowBox[{"\[ForAll]", 
+     RowBox[{"i", "\[Element]", "J", "\[Subset]", "I"}]}], ")"}]}]}]], "Text",\
+
+ CellChangeTimes->{{3.3902794794120083`*^9, 3.3902795156780972`*^9}, 
+   3.3902795498504095`*^9, {3.390279605991753*^9, 3.3902796624924765`*^9}, {
+   3.390279801213002*^9, 3.390279840025999*^9}, {3.3902798999173903`*^9, 
+   3.3902799599337835`*^9}, {3.390280205343175*^9, 3.3902802060150585`*^9}, {
+   3.3902802412498846`*^9, 3.390280244515551*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "La", " ", "determination", " ", "du", " ", "portefeuille", " ", "de", " ", 
+   "calibration", " ", "est", " ", "donc", " ", "la", " ", "determination", 
+   " ", "de", " ", "J", " ", "etant", " ", "donn\[EAcute]", " ", "une", " ", 
+   "mesure", " ", "de", " ", "precision", " ", "ou", " ", "bien", " ", 
+   RowBox[{"d", "'"}], "une", " ", "sequence", " ", 
+   SubscriptBox["J", 
+    RowBox[{"n", " "}]]}], "\[Subset]", " ", 
+  RowBox[{"I", "  ", 
+   RowBox[{"c", "'"}], "est", " ", "a", " ", "dire", " ", 
+   RowBox[{"d", "'"}], "ensembles", " ", "tels", " ", "que", "   ", 
+   SubscriptBox["J", 
+    RowBox[{"n", " "}]]}], "\[Subset]", 
+  RowBox[{
+   SubscriptBox["J", 
+    RowBox[{"n", " ", "+", "1"}]], "   ", "chacun", " ", "etant", " ", 
+   RowBox[{"optimaux", " ", "."}]}]}]], "Text",
+ CellChangeTimes->{{3.3902801278265576`*^9, 3.390280181780373*^9}, {
+  3.3902802518906455`*^9, 3.3902804375961475`*^9}, {3.3902806498019886`*^9, 
+  3.3902806503488708`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "Le", " ", "probleme", " ", "se", " ", "ramene", " ", "donc", " ", "a", " ",
+    "etant", " ", "donn\[EAcute]", " ", 
+   SubscriptBox["J", "k"], "  ", "comment", " ", "determiner", " ", 
+   SubscriptBox["y", 
+    RowBox[{"k", "+", "1"}]]}], "\[Element]", 
+  RowBox[{"I", " ", "et", " ", 
+   SubscriptBox["y", 
+    RowBox[{"k", "+", "1"}]]}], "\[NotElement]", 
+  RowBox[{
+   SubscriptBox["J", "k"], "  ", "tel", " ", "que", " ", "ce", " ", "choix", 
+   " ", "soit", " ", 
+   RowBox[{"optimal", "."}]}]}]], "Text",
+ CellChangeTimes->{{3.390280498112547*^9, 3.3902806535051613`*^9}}],
+
+Cell[TextData[{
+ " ",
+ StyleBox["Le critere de cette optimalit\[EAcute] sera la robustesse \
+additionnelle maximum procur\[EAcute]e par l' ajout de cet instrument dans le \
+portefeuille de calibration.",
+  FontFamily->"Courier New"]
+}], "Text",
+ CellChangeTimes->{
+  3.3902805277223015`*^9, {3.390280676146076*^9, 3.390280708474615*^9}, 
+   3.390280788881894*^9, {3.390280920696081*^9, 3.390280989650089*^9}}],
+
+Cell["\<\
+La robustesse est li\[EAcute]e a la capacit\[EAcute] pour une calibration a \
+resister au changement \
+\>", "Text",
+ CellChangeTimes->{{3.3902810911982636`*^9, 3.390281133089425*^9}}],
+
+Cell["\<\
+La robustesse est l' amelioration du conditionement d' un probleme\
+\>", "Text",
+ CellChangeTimes->{{3.3902846594626865`*^9, 3.390284697416298*^9}}],
+
+Cell["\<\
+on suppose que les parametre du processus sont bien definit on veut y acceder \
+de maniere robuste. \
+\>", "Text",
+ CellChangeTimes->{{3.390284707978933*^9, 3.3902847703078556`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"pour", " ", "obtenir", " ", "des", " ", "parametres", " ", 
+  "optimaux", " ", "on", " ", "minimise", " ", 
+  RowBox[{
+   UnderoverscriptBox["\[Sum]", 
+    RowBox[{"k", "=", "1"}], "n"], 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"E", "[", 
+       SubscriptBox["P", 
+        RowBox[{"k", ",", "a"}]], "]"}], "-", 
+      SubscriptBox["C", "k"]}], ")"}], "2"]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+   "Si", " ", "on", " ", "rajoute", " ", "le", " ", "prix", "  ", "n"}], "+", 
+   "1"}], " ", ",", 
+  RowBox[{
+  "on", " ", "veut", " ", "caracteriser", " ", "le", " ", "conditionement", 
+   " ", "de", " ", 
+   RowBox[{"l", "'"}], 
+   RowBox[{"optimisation", ":", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"k", "=", "1"}], 
+      RowBox[{"n", "+", "1"}]], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"E", "[", 
+         SubscriptBox["P", 
+          RowBox[{"k", ",", "a"}]], "]"}], "-", 
+        SubscriptBox["C", "k"]}], ")"}], "2"]}]}]}]}]}], "Text",
+ CellChangeTimes->{{3.390284852605784*^9, 3.3902850060764985`*^9}, {
+  3.3902850374362745`*^9, 3.3902850469988976`*^9}, {3.3903138622271023`*^9, 
+  3.3903138890399456`*^9}}],
+
+Cell["\<\
+On selectionera l' instrument pour lequel le conditionement est le plus \
+amelior\[EAcute]\
+\>", "Text",
+ CellChangeTimes->{{3.3902856924134083`*^9, 3.3902857178981094`*^9}, {
+  3.3902930709297276`*^9, 3.390293088039321*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Supposons", " ", "que", " ", 
+   RowBox[{"l", "'"}], "on", " ", "utilise", " ", 
+   RowBox[{"l", "'"}], "algorithme", " ", "de", " ", "decente", " ", "de", 
+   " ", "gradient", " ", "pour", " ", "converger"}], 
+  "   "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"soit", "   ", 
+   SubscriptBox["J", 
+    RowBox[{"k", ",", "a"}]]}], "=", 
+  RowBox[{
+   RowBox[{
+    SubscriptBox["\[Del]", "a"], 
+    RowBox[{"E", "[", 
+     SubscriptBox["P", 
+      RowBox[{"k", ",", "a"}]], "]"}]}], " ", "le", " ", "gradient", " ", 
+   "de", " ", 
+   RowBox[{"E", "[", 
+    SubscriptBox["P", 
+     RowBox[{"k", ",", "a"}]], "]"}]}]}]}], "Text",
+ CellChangeTimes->{{3.3902951148777647`*^9, 3.390295226332316*^9}, {
+  3.3902967794303207`*^9, 3.3902968030399976`*^9}, {3.390298590140997*^9, 
+  3.390298654329319*^9}, {3.390298837394162*^9, 3.390298839487939*^9}, {
+  3.3902988964105425`*^9, 3.3902989348016586`*^9}, {3.3902989787240963`*^9, 
+  3.39029898063037*^9}, {3.390299043396799*^9, 3.3902990519594083`*^9}, {
+  3.3903139056807833`*^9, 3.3903139265873013`*^9}}],
+
+Cell["\<\
+Si on est proche de l' optimum dans le cas completement differentiable on a : \
+\
+\>", "Text",
+ CellChangeTimes->{{3.3902990616782827`*^9, 3.3902990895223894`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Min", " ", 
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"k", "=", "1"}], 
+     RowBox[{"n", "+", "1"}]], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"E", "[", 
+        SubscriptBox["P", 
+         RowBox[{"k", ",", "a"}]], "]"}], "-", 
+       SubscriptBox["C", "k"]}], ")"}], "2"]}]}], "=", 
+  RowBox[{
+   RowBox[{"Min", " ", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"k", "=", "1"}], 
+      RowBox[{"n", "+", "1"}]], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox[
+         SuperscriptBox["P", "*"], "k"], "+", 
+        RowBox[{
+         UnderoverscriptBox["\[Sum]", 
+          RowBox[{"a", "=", "1"}], "m"], 
+         RowBox[{
+          SubscriptBox["J", 
+           RowBox[{"k", ",", "a"}]], 
+          RowBox[{"(", 
+           RowBox[{
+            SubscriptBox["y", "a"], "-", 
+            SubscriptBox["y", 
+             SuperscriptBox["a", "*"]]}], ")"}]}]}], "-", 
+        SubscriptBox["C", "k"]}], ")"}], "2"]}]}], "=", 
+   RowBox[{"Min", " ", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"k", "=", "1"}], 
+      RowBox[{"n", "+", "1"}]], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox[
+         SuperscriptBox["P", "*"], "k"], "+", 
+        RowBox[{
+         UnderoverscriptBox["\[Sum]", 
+          RowBox[{"a", "=", "1"}], "m"], 
+         RowBox[{
+          SubscriptBox["J", 
+           RowBox[{"k", ",", "a"}]], 
+          SubscriptBox["x", "a"]}]}], "-", 
+        SubscriptBox["C", "k"]}], ")"}], "2"]}]}]}]}]], "Text",
+ CellChangeTimes->{{3.390299097241238*^9, 3.390299333322385*^9}, {
+  3.390299383166773*^9, 3.3902993946512947`*^9}, {3.390299870438635*^9, 
+  3.3902998868138447`*^9}, {3.390300196614685*^9, 3.3903002037241507`*^9}}],
+
+Cell["on suppose que n >> m", "Text",
+ CellChangeTimes->{{3.3902999092203813`*^9, 3.39029992042365*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ceci", " ", "implique", " ", "m", " ", 
+   RowBox[{"equation", ":", " ", 
+    RowBox[{
+     SubscriptBox["\[PartialD]", 
+      SubscriptBox["x", "a"]], 
+     RowBox[{"(", 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"k", "=", "1"}], 
+        RowBox[{"n", "+", "1"}]], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox[
+           SuperscriptBox["P", "*"], "k"], "+", 
+          RowBox[{
+           UnderoverscriptBox["\[Sum]", 
+            RowBox[{"a", "=", "1"}], "m"], 
+           RowBox[{
+            SubscriptBox["J", 
+             RowBox[{"k", ",", "a"}]], 
+            SubscriptBox["x", "a"]}]}], "-", 
+          SubscriptBox["C", "k"]}], ")"}], "2"]}], ")"}]}]}]}], "=", 
+  "0"}]], "Text",
+ CellChangeTimes->{{3.39029993529884*^9, 3.390299940986413*^9}, {
+  3.3903000503471875`*^9, 3.3903001254575243`*^9}, {3.3903001992397184`*^9, 
+  3.3903001994740963`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Implies]", " ", 
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"k", "=", "1"}], 
+     RowBox[{"n", "+", "1"}]], 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox[
+        SuperscriptBox["P", "*"], "k"], "+", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"b", "=", "1"}], "m"], 
+        RowBox[{
+         SubscriptBox["J", 
+          RowBox[{"k", ",", "b"}]], 
+         SubscriptBox["x", "b"]}]}], "-", 
+       SubscriptBox["C", "k"]}], ")"}], 
+     SubscriptBox["J", 
+      RowBox[{"k", ",", "a"}]]}]}]}], "=", "0"}]], "Text",
+ CellChangeTimes->{{3.390300133676379*^9, 3.390300170770604*^9}, {
+  3.3903002065835624`*^9, 3.390300220833745*^9}, {3.3903004581649075`*^9, 
+  3.3903004666025157`*^9}}],
+
+Cell["soit ", "Text",
+ CellChangeTimes->{{3.390300223896284*^9, 3.3903002247087946`*^9}}],
+
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"k", "=", "1"}], 
+     RowBox[{"n", "+", "1"}]], 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"b", "=", "1"}], "m"], 
+     RowBox[{
+      SubscriptBox["J", 
+       RowBox[{"k", ",", "a"}]], 
+      SubscriptBox["J", 
+       RowBox[{"k", ",", "b"}]], 
+      SubscriptBox["x", "b"]}]}]}], "=", 
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"k", "=", "1"}], 
+     RowBox[{"n", "+", "1"}]], 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["C", "k"], "-", 
+       SubscriptBox[
+        SuperscriptBox["P", "*"], "k"]}], ")"}], 
+     SubscriptBox["J", 
+      RowBox[{"k", ",", "a"}]]}]}]}]}]], "Text",
+ CellChangeTimes->{{3.390300133676379*^9, 3.390300170770604*^9}, {
+  3.3903002065835624`*^9, 3.3903002872877207`*^9}, {3.3903003549760866`*^9, 
+  3.3903003654293456`*^9}, {3.3903004893371816`*^9, 3.3903004968841534`*^9}, {
+  3.390300529290818*^9, 3.3903005414003477`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "On", " ", "voit", " ", "donc", " ", "que", " ", "le", " ", 
+   "conditionement", " ", "du", " ", "probleme", " ", "est", " ", 
+   "li\[EAcute]", " ", "au", " ", "conditionement", " ", "de", " ", "la", " ",
+    "matrice", "    ", 
+   SubscriptBox["Z", 
+    RowBox[{"a", ",", "b"}]]}], "=", " ", 
+  RowBox[{
+   UnderoverscriptBox["\[Sum]", 
+    RowBox[{"k", "=", "1"}], 
+    RowBox[{"n", "+", "1"}]], 
+   RowBox[{
+    SubscriptBox["J", 
+     RowBox[{"k", ",", "a"}]], 
+    SubscriptBox["J", 
+     RowBox[{"k", ",", "b"}]]}]}]}]], "Text",
+ CellChangeTimes->{{3.3903006284483376`*^9, 3.390300701308645*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "Le", " ", "conditionement", " ", "est", " ", "donn\[EAcute]", " ", "par", 
+   " ", "le", " ", "ratio", " ", 
+   FractionBox[
+    RowBox[{"Max", "[", 
+     RowBox[{"Spectre", "[", "Z", "]"}], "]"}], 
+    RowBox[{"Min", "[", 
+     RowBox[{"Spectre", "[", "Z", "]"}], "]"}]]}], "=", 
+  RowBox[{
+   RowBox[{"\[LeftDoubleBracketingBar]", "Z", "\[RightDoubleBracketingBar]"}],
+    "\[CenterDot]", 
+   RowBox[{"\[LeftDoubleBracketingBar]", 
+    SuperscriptBox["Z", 
+     RowBox[{"-", "1"}]], "\[RightDoubleBracketingBar]"}]}]}]], "Text",
+ CellChangeTimes->{{3.3903007105743885`*^9, 3.3903007290277495`*^9}}],
+
+Cell["\<\
+Suposons que le nouvel instrument soit parametr\[EAcute] par K (un strike par \
+exemple)\
+\>", "Text",
+ CellChangeTimes->{{3.390302361017389*^9, 3.390302395049074*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"On", " ", "appelle", "  ", 
+   SubscriptBox["Z", "core"]}], "=", 
+  RowBox[{
+   UnderoverscriptBox["\[Sum]", 
+    RowBox[{"k", "=", "1"}], "n"], 
+   RowBox[{
+    SubscriptBox["J", 
+     RowBox[{"k", ",", "a"}]], 
+    SubscriptBox["J", 
+     RowBox[{"k", ",", "b"}]]}]}]}]], "Text",
+ CellChangeTimes->{{3.39030240329918*^9, 3.3903024491903925`*^9}}],
+
+Cell["\<\
+on est donc interress\[EAcute] par resoudre :\
+\>", "Text",
+ CellChangeTimes->{{3.3903024674093757`*^9, 3.390302489940914*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubscriptBox["\[PartialD]", "K"], 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[LeftDoubleBracketingBar]", 
+      RowBox[{
+       SubscriptBox["Z", "core"], "+", 
+       RowBox[{
+        RowBox[{"J", "[", "K", "]"}], "\[CircleTimes]", 
+        RowBox[{"J", "[", "K", "]"}]}]}], "\[RightDoubleBracketingBar]"}], 
+     "\[CenterDot]", 
+     RowBox[{"\[LeftDoubleBracketingBar]", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         SubscriptBox["Z", "core"], "+", 
+         RowBox[{
+          RowBox[{"J", "[", "K", "]"}], "\[CircleTimes]", 
+          RowBox[{"J", "[", "K", "]"}]}]}], ")"}], 
+       RowBox[{"-", "1"}]], "\[RightDoubleBracketingBar]"}]}], ")"}]}], "=", 
+  "0"}]], "Text",
+ CellDingbat->"\[FilledSquare]",
+ CellChangeTimes->{{3.390302510034921*^9, 3.3903026643181458`*^9}},
+ TextAlignment->Center],
+
+Cell["ce qui se reecrit :", "Text",
+ CellChangeTimes->{{3.390305322789674*^9, 3.3903053279303646`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[LeftDoubleBracketingBar]", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["Z", "core"], "+", 
+        RowBox[{
+         RowBox[{"J", "[", "K", "]"}], "\[CircleTimes]", 
+         RowBox[{"J", "[", "K", "]"}]}]}], ")"}], 
+      RowBox[{"-", "1"}]], "\[RightDoubleBracketingBar]"}], 
+    RowBox[{
+     SubscriptBox["\[PartialD]", "K"], 
+     RowBox[{"(", 
+      RowBox[{"\[LeftDoubleBracketingBar]", 
+       RowBox[{
+        SubscriptBox["Z", "core"], "+", 
+        RowBox[{
+         RowBox[{"J", "[", "K", "]"}], "\[CircleTimes]", 
+         RowBox[{"J", "[", "K", "]"}]}]}], "\[RightDoubleBracketingBar]"}], 
+      ")"}]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftDoubleBracketingBar]", 
+     RowBox[{
+      SubscriptBox["Z", "core"], "+", 
+      RowBox[{
+       RowBox[{"J", "[", "K", "]"}], "\[CircleTimes]", 
+       RowBox[{"J", "[", "K", "]"}]}]}], "\[RightDoubleBracketingBar]"}], 
+    RowBox[{
+     SubscriptBox["\[PartialD]", "K"], 
+     RowBox[{"(", 
+      RowBox[{"\[LeftDoubleBracketingBar]", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox["Z", "core"], "+", 
+          RowBox[{
+           RowBox[{"J", "[", "K", "]"}], "\[CircleTimes]", 
+           RowBox[{"J", "[", "K", "]"}]}]}], ")"}], 
+        RowBox[{"-", "1"}]], "\[RightDoubleBracketingBar]"}], ")"}]}]}]}], 
+  "=", "0"}]], "Text",
+ CellChangeTimes->{
+  3.3903053386805024`*^9, {3.3903054097439117`*^9, 3.3903054249316063`*^9}, {
+   3.3903054981825438`*^9, 3.3903055220422244`*^9}}],
+
+Cell["Calculons J[K]", "Text",
+ CellChangeTimes->{{3.3903028588675113`*^9, 3.3903028689926405`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"J", "[", "K", "]"}], "=", 
+  RowBox[{
+   RowBox[{
+    SubscriptBox["\[Del]", "a"], 
+    RowBox[{"E", "[", 
+     RowBox[{
+      SubscriptBox["P", "a"], "[", "K", "]"}], "]"}]}], "=", 
+   RowBox[{
+    RowBox[{"E", "[", 
+     RowBox[{
+      SubscriptBox["\[Del]", "a"], 
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["P", "a"], "[", "K", "]"}], ")"}]}], "]"}], "=", 
+    RowBox[{
+     RowBox[{"E", "[", 
+      RowBox[{
+       SubscriptBox["\[Del]", "a"], 
+       RowBox[{"(", 
+        RowBox[{
+         SubscriptBox["P", "K"], "[", 
+         SubscriptBox["S", "a"], "]"}], ")"}]}], "]"}], " ", "=", 
+     RowBox[{
+      RowBox[{"E", "[", 
+       RowBox[{
+        SubsuperscriptBox["\[Integral]", "0", "\[Infinity]"], 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\[Delta]", 
+           RowBox[{
+            SubscriptBox["P", "K"], "[", 
+            SubscriptBox["S", "a"], "]"}]}], 
+          RowBox[{
+           SubscriptBox["\[Delta]S", "a"], "[", "T", "]"}]], 
+         RowBox[{
+          SubscriptBox["\[Del]", "a"], 
+          RowBox[{
+           SubscriptBox["S", "a"], "[", "T", "]"}]}], 
+         RowBox[{"\[DifferentialD]", "T"}]}]}], "]"}], "=", 
+      RowBox[{"E", "[", 
+       RowBox[{
+        SubsuperscriptBox["\[Integral]", "0", "\[Infinity]"], 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\[Delta]", 
+           RowBox[{
+            SubscriptBox["P", "K"], "[", 
+            SubscriptBox["S", "a"], "]"}]}], 
+          RowBox[{
+           SubscriptBox["\[Delta]S", "a"], "[", "T", "]"}]], 
+         RowBox[{
+          SubsuperscriptBox["\[Integral]", "0", "T"], 
+          RowBox[{
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             SubscriptBox["S", "a"]}], 
+            RowBox[{"\[PartialD]", 
+             SubscriptBox["W", "t"]}]], 
+           SubscriptBox["H", 
+            RowBox[{"t", ",", "a"}]], 
+           RowBox[{"\[DifferentialD]", "t"}], 
+           RowBox[{"\[DifferentialD]", "T"}]}]}]}]}], "]"}]}]}]}]}]}]], "Text",\
+
+ CellChangeTimes->{{3.390302873289571*^9, 3.3903029296809177`*^9}, {
+  3.390303677393613*^9, 3.3903037772698917`*^9}, {3.39030500411372*^9, 
+  3.3903052749609365`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["H", 
+   RowBox[{"t", ",", "a"}]], " ", "est", " ", "le", " ", "ratio", " ", 
+  "issue", " ", "du", " ", "resultat", " ", "classique", " ", "de", " ", 
+  "liaison", " ", "entre", " ", "les", " ", "deriv\[EAcute]es", " ", "de", 
+  " ", "malliavin", " ", "et", " ", "les", " ", "deriv\[EAcute]es", " ", 
+  "queconque", " ", "si", " ", "on", " ", "a", " ", "hypoellipticit\[EAcute]",
+   " ", "du", " ", "process"}]], "Text",
+ CellChangeTimes->{{3.3903055760429153`*^9, 3.390305650684496*^9}}],
+
+Cell[BoxData[
+ RowBox[{"par", " ", "exemple", " ", "si", " ", 
+  SubscriptBox["P", "k"], " ", "est", " ", "un", " ", "swaption", " ", "a", 
+  " ", "notionel", " ", "variable", " ", "defini", " ", "par", " ", "la", " ",
+   "sequence", " ", "de", " ", "notionnels", "  ", 
+  SubscriptBox["N", "i"]}]], "Text",
+ CellChangeTimes->{{3.390305673012907*^9, 3.3903057447482*^9}, {
+  3.39031399172876*^9, 3.3903139922912674`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[Delta]", 
+    RowBox[{
+     SubscriptBox["P", "K"], "[", 
+     SubscriptBox["S", "a"], "]"}]}], 
+   RowBox[{
+    SubscriptBox["\[Delta]S", "a"], "[", "T", "]"}]], "=", 
+  RowBox[{"\[Delta]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["S", "a"], "[", "T", "]"}], "-", 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"i", "=", "1"}], "p"], 
+      RowBox[{
+       SubscriptBox["B", 
+        SubscriptBox["T", "i"]], 
+       RowBox[{"(", 
+        RowBox[{
+         SubscriptBox["N", 
+          RowBox[{"i", "+", "1"}]], "-", 
+         SubscriptBox["N", "i"]}], ")"}]}]}]}], ")"}]}]}]], "Text",
+ CellChangeTimes->{{3.3903057926238127`*^9, 3.390305794733215*^9}, {
+  3.3903058522183256`*^9, 3.390305871781076*^9}, {3.3903059303443255`*^9, 
+  3.390305998251445*^9}}]
+}, Open  ]]
+},
+WindowSize->{1026, 792},
+WindowMargins->{{Automatic, 85}, {Automatic, 0}},
+FrontEndVersion->"6.0 for Microsoft Windows (32-bit) (April 20, 2007)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[590, 23, 128, 1, 83, "Title"],
+Cell[721, 26, 759, 14, 29, "Text"],
+Cell[1483, 42, 751, 16, 49, "Text"],
+Cell[2237, 60, 1194, 31, 47, "Text"],
+Cell[3434, 93, 994, 22, 29, "Text"],
+Cell[4431, 117, 1001, 21, 49, "Text"],
+Cell[5435, 140, 617, 15, 29, "Text"],
+Cell[6055, 157, 409, 9, 47, "Text"],
+Cell[6467, 168, 193, 4, 29, "Text"],
+Cell[6663, 174, 158, 3, 29, "Text"],
+Cell[6824, 179, 192, 4, 29, "Text"],
+Cell[7019, 185, 1245, 36, 97, "Text"],
+Cell[8267, 223, 235, 5, 29, "Text"],
+Cell[8505, 230, 1088, 26, 49, "Text"],
+Cell[9596, 258, 174, 4, 29, "Text"],
+Cell[9773, 264, 1826, 57, 53, "Text"],
+Cell[11602, 323, 104, 1, 29, "Text"],
+Cell[11709, 326, 963, 28, 53, "Text"],
+Cell[12675, 356, 790, 24, 53, "Text"],
+Cell[13468, 382, 89, 1, 29, "Text"],
+Cell[13560, 385, 1018, 31, 53, "Text"],
+Cell[14581, 418, 641, 18, 53, "Text"],
+Cell[15225, 438, 638, 16, 46, "Text"],
+Cell[15866, 456, 178, 4, 29, "Text"],
+Cell[16047, 462, 383, 12, 51, "Text"],
+Cell[16433, 476, 137, 3, 29, "Text"],
+Cell[16573, 481, 868, 25, 32, "Text"],
+Cell[17444, 508, 103, 1, 29, "Text"],
+Cell[17550, 511, 1582, 45, 32, "Text"],
+Cell[19135, 558, 100, 1, 29, "Text"],
+Cell[19238, 561, 2211, 67, 46, "Text"],
+Cell[21452, 630, 528, 9, 49, "Text"],
+Cell[21983, 641, 421, 7, 29, "Text"],
+Cell[22407, 650, 851, 27, 52, "Text"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

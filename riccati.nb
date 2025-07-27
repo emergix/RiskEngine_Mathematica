@@ -1,0 +1,330 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      9284,        261]*)
+(*NotebookOutlinePosition[      9929,        283]*)
+(*  CellTagsIndexPosition[      9885,        279]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+Cell[BoxData[
+    RowBox[{\(Let\ q\_1\), "=", 
+      RowBox[{\(q\_11\), " ", 
+        SuperscriptBox["\[ExponentialE]", 
+          RowBox[{
+            RowBox[{"-", 
+              FractionBox[
+                RowBox[{"V", " ", 
+                  SuperscriptBox[
+                    StyleBox["z",
+                      FontSize->16], "2"]}], "2"]}], "\[Tau]"}]]}]}]], "Input"],
+
+Cell[BoxData[
+    \(\(\(we\)\(\ \)\(get\)\(\ \)\(the\)\(\ \)\(equation\)\(\ \)\)\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      StyleBox["{",
+        ShowAutoStyles->False,
+        FontSize->16], 
+      StyleBox[GridBox[{
+            {
+              
+              StyleBox[\(\[PartialD]\ q\_11\/\(\(\[PartialD]\)\(\[Tau]\)\(\ \
+\)\) = \(\(\[Kappa]\^2\ V\)\/2\) \[PartialD]\^2\ q\_11\/\[PartialD]V\^2 + \((\
+\[Rho]\ \(\[Lambda]\_v\) \[Theta]\_v - 
+                          v\ \[Rho] \((\ \[Lambda]\_v + \[ImaginaryI]\ z\ \
+\[Kappa])\))\) \[PartialD]\ q\_11\/\(\(\[PartialD]\)\(V\)\(\ \)\)\),
+                FontSize->16]},
+            {\(\(q\_11\) \((0)\) = 1\)}
+            }],
+        ShowAutoStyles->True,
+        FontSize->16]}]], "Input"],
+
+Cell[BoxData[
+    \(let\ assume\ that\ the\ equation\ q\_11[
+          V, \[Tau]] = \[ExponentialE]\^\(A[\[Tau]] + B[\[Tau]]\ V\)\)], \
+"Input"],
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(then\ we\ have \((\ \(\(\[PartialD]\)\(A[\
+\[Tau]]\)\(\ \)\)\/\(\(\[PartialD]\)\(\[Tau]\)\(\ \)\) + \
+\(\(\[PartialD]\)\(B[\[Tau]]\)\(\ \)\)\/\(\(\[PartialD]\)\(\[Tau]\)\(\ \)\)\ \
+V)\) q\_11 = \((\(\(\[Kappa]\^2\ V\)\/2\) 
+              B[\[Tau]]\^2 + \((\[Rho]\ \(\[Lambda]\_v\) \[Theta]\_v - 
+                  V\ \[Rho] \((\ \[Lambda]\_v + \[ImaginaryI]\ z\ \
+\[Kappa])\))\) B[\[Tau]])\) q\_11\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(then\ we\ get\ the\ coupled\ \(\(system\)\(:\)\)\)], "Input"],
+
+Cell[BoxData[
+    TagBox[
+      StyleBox[
+        RowBox[{"{", 
+          StyleBox[GridBox[{
+                {\(\(\(\[PartialD]\)\(A[t]\)\(\ \)\)\/\(\(\[PartialD]\)\(\
+\[Tau]\)\(\ \)\) = \[Rho]\ \(\[Lambda]\_v\) \(\[Theta]\_v\) B[t]\)},
+                {\(\(\(\[PartialD]\)\(B[\[Tau]]\)\(\ \
+\)\)\/\(\(\[PartialD]\)\(\[Tau]\)\(\ \)\) = \(\(\(\[Kappa]\^2\)\(\ \)\)\/2\) 
+                        B[\[Tau]]\^2 - \ \[Rho] \((\ \[Lambda]\_v + \
+\[ImaginaryI]\ z\ \[Kappa])\) B[\[Tau]]\)}
+                }],
+            ShowAutoStyles->True]}],
+        ShowAutoStyles->False],
+      (#&)]], "Input"],
+
+Cell[BoxData[
+    \(with\ the\ initial\ \(value : \ A[0]\)\  = \(B[0] = 0\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\(So\)\(\ \)\(I\)\(\ \)\(want\)\(\ \)\(to\)\(\ \)\(solve\)\(\ \
+\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\(dB\)\(\ \)\)\/\(\(d\[Tau]\)\(\ \)\) = \[Alpha]\ B\^2 + \[Beta]\ \
+B\)], "Input"],
+
+Cell[BoxData[
+    \(\(\(with\)\(\ \)\)\)], "Input"],
+
+Cell[BoxData[
+    TagBox[
+      StyleBox[
+        RowBox[{"{", 
+          StyleBox[GridBox[{
+                {\(\[Alpha] = \(\(\[Kappa]\^2\)\(\ \)\)\/2\)},
+                {\(\[Beta] = \(-\ \[Rho]\) \((\ \[Lambda]\_v + \[ImaginaryI]\ \
+z\ \[Kappa])\)\)}
+                }],
+            ShowAutoStyles->True]}],
+        ShowAutoStyles->False],
+      (#&)]], "Input"],
+
+Cell[BoxData[
+    \(so\ we\ \(\(get\)\(\ \)\(:\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\(dB\/\(\[Alpha]\ B\^2 + \[Beta]\ B\)\)\(=\)\(d\[Tau]\)\(\ \)\)\)], \
+"Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Integrate[
+      1\/\(\[Alpha]\ B\^2 + \[Beta]\ B\), {B, B\_0, B\_\[Tau]}]\)], "Input"],
+
+Cell[BoxData[
+    \(If[\((Re[B\_0\/\(B\_0 - B\_\[Tau]\)] \[GreaterEqual] 1 || 
+              Re[B\_0\/\(\(-B\_0\) + B\_\[Tau]\)] \[GreaterEqual] 0 || 
+              Im[B\_0\/\(\(-B\_0\) + B\_\[Tau]\)] \[NotEqual] 
+                0)\) && \((Re[\(\[Beta] + \[Alpha]\ B\_0\)\/\(\[Alpha]\ B\_0 \
+- \[Alpha]\ B\_\[Tau]\)] \[LessEqual] 0 || 
+              Re[\(\[Beta] + \[Alpha]\ B\_0\)\/\(\[Alpha]\ B\_0 - \[Alpha]\ B\
+\_\[Tau]\)] \[GreaterEqual] 1 || 
+              Im[\(\[Beta] + \[Alpha]\ B\_0\)\/\(\[Alpha]\ B\_0 - \[Alpha]\ B\
+\_\[Tau]\)] \[NotEqual] 
+                0)\), \(Log[B\_0] - Log[\[Beta] + \[Alpha]\ B\_0] - Log[B\_\
+\[Tau]] + Log[\[Beta] + \[Alpha]\ B\_\[Tau]]\)\/\(\[Beta]\ \((B\_0 - \
+B\_\[Tau])\)\), 
+        Integrate[
+          1\/\(\[Beta]\ \((B\_0 + B\ \((\(-B\_0\) + B\_\[Tau])\))\) + \
+\[Alpha]\ \((B\_0 + B\ \((\(-B\_0\) + B\_\[Tau])\))\)\^2\), {B, 0, 1}, 
+          Assumptions \[Rule] \(! \((\((Re[
+                          B\_0\/\(B\_0 - B\_\[Tau]\)] \[GreaterEqual] 1 || 
+                      Re[B\_0\/\(\(-B\_0\) + B\_\[Tau]\)] \[GreaterEqual] 0 || 
+                      Im[B\_0\/\(\(-B\_0\) + B\_\[Tau]\)] \[NotEqual] 
+                        0)\) && \((Re[\(\[Beta] + \[Alpha]\ \
+B\_0\)\/\(\[Alpha]\ B\_0 - \[Alpha]\ B\_\[Tau]\)] \[LessEqual] 0 || 
+                      Re[\(\[Beta] + \[Alpha]\ B\_0\)\/\(\[Alpha]\ B\_0 - \
+\[Alpha]\ B\_\[Tau]\)] \[GreaterEqual] 1 || 
+                      Im[\(\[Beta] + \[Alpha]\ B\_0\)\/\(\[Alpha]\ B\_0 - \
+\[Alpha]\ B\_\[Tau]\)] \[NotEqual] 0)\))\)\)]]\ \((\(-B\_0\) + 
+          B\_\[Tau])\)\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(So\ we\ deduce\)], "Input"],
+
+Cell[BoxData[
+    \(\(Log[B\_0] - Log[\[Beta] + \[Alpha]\ B\_0] - Log[B\_\[Tau]] + Log[\
+\[Beta] + \[Alpha]\ B\_\[Tau]]\)\/\(\(\[Beta]\)\(\ \)\) \[Equal] \[Tau]\)], \
+"Input"],
+
+Cell[BoxData[
+    \(\(\(which\)\(\ \)\(is\)\(\ \)\(equivalent\)\(\ \)\(to\)\(\ \)\)\)], \
+"Input"],
+
+Cell[BoxData[
+    \(Log[\(\[Beta] + \[Alpha]\ B\_\[Tau]\)\/B\_\[Tau]] = \[Beta]\ \[Tau] + 
+        Log[\(\[Beta] + \[Alpha]\ B\_0\)\/B\_0]\)], "Input"],
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(Equivalent\ to\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\[Beta] + \[Alpha]\ B\_\[Tau]\)\/B\_\[Tau] = \(\(\[Beta] + \[Alpha]\ \
+B\_0\)\/B\_0\) \[ExponentialE]\^\(\[Beta]\ \[Tau]\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\(So\)\(\ \)\(we\)\(\ \)\(deduce\)\(\ \)\)\)], "Input"],
+
+Cell[BoxData[
+    \(B\_\[Tau] = \(\[Beta]\ B\_0\)\/\(\[Beta] + \[Alpha]\ \(B\_0\) \
+\[ExponentialE]\^\(\[Beta]\ \[Tau]\) - \[Alpha]\ B\_0\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\(and\)\(\ \)\(therfore\)\(\ \)\)\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\ \)\(A\_\[Tau] = 
+      Simplify[Integrate[\[Rho]\ \(\[Lambda]\_v\) \(\[Theta]\_v\) \(\[Beta]\ \
+B\_0\)\/\(\[Beta] + \[Alpha]\ \(B\_0\) \[ExponentialE]\^\(\[Beta]\ t\) - \
+\[Alpha]\ B\_0\), {t, 0, \[Tau]}]]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\[Rho]\ \((\[Beta]\ \[Tau] + Log[\[Beta]] - Log[\[Beta] + \((\(-1\) + \
+\[ExponentialE]\^\(\[Beta]\ \[Tau]\))\)\ \[Alpha]\ B\_0])\)\ B\_0\ \
+\[Theta]\_v\ \[Lambda]\_v\)\/\(\[Beta] - \[Alpha]\ B\_0\)\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(So\ we\ have\ solved\ the\ \(\(system\)\(:\)\)\)], "Input"],
+
+Cell[BoxData[
+    StyleBox[
+      TagBox[
+        StyleBox[
+          RowBox[{"{", 
+            StyleBox[GridBox[{
+                  {\(B\_\[Tau] = \(\(\[Beta]\)\(\ \)\)\/\(\(\[Beta]/B\_0\)\(+\
+\)\(\[Alpha]\ \[ExponentialE]\^\(\[Beta]\ \[Tau]\)\)\(-\)\(\[Alpha]\)\(\ \)\)\
+\)},
+                  {\(A\_\[Tau] = \(\[Rho]\ \((\[Beta]\ \[Tau] + Log[\[Beta]] \
+- Log[\[Beta] + \((\(-1\) + \[ExponentialE]\^\(\[Beta]\ \[Tau]\))\)\ \[Alpha]\
+\ B\_0])\)\ \ \[Theta]\_v\ \
+\[Lambda]\_v\)\/\(\(\[Beta]/B\_0\)\(-\)\(\[Alpha]\)\(\ \)\)\)}
+                  }],
+              ShowAutoStyles->True]}],
+          ShowAutoStyles->False],
+        (#&)],
+      FontSize->18]], "Input"],
+
+Cell[BoxData[
+    \(Only\ one\ \(probleme : \ we\ cannot\ have\ B\_0\) = 
+      0\ in\ the\ preceding\ solution, \ 
+    may\ be\ this\ problem\ disappears\ afterwards\)], "Input"]
+},
+FrontEndVersion->"5.2 for Microsoft Windows",
+ScreenRectangle->{{0, 1280}, {0, 949}},
+WindowSize->{832, 708},
+WindowMargins->{{18, Automatic}, {Automatic, 23}}
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+Cell[1754, 51, 375, 10, 39, "Input"],
+Cell[2132, 63, 93, 1, 30, "Input"],
+Cell[2228, 66, 650, 17, 59, "Input"],
+Cell[2881, 85, 144, 3, 30, "Input"],
+Cell[3028, 90, 461, 7, 67, "Input"],
+Cell[3492, 99, 81, 1, 30, "Input"],
+Cell[3576, 102, 594, 14, 65, "Input"],
+Cell[4173, 118, 88, 1, 30, "Input"],
+Cell[4264, 121, 103, 2, 30, "Input"],
+Cell[4370, 125, 104, 2, 43, "Input"],
+Cell[4477, 129, 51, 1, 30, "Input"],
+Cell[4531, 132, 365, 11, 53, "Input"],
+Cell[4899, 145, 63, 1, 30, "Input"],
+Cell[4965, 148, 100, 2, 44, "Input"],
+
+Cell[CellGroupData[{
+Cell[5090, 154, 107, 2, 44, "Input"],
+Cell[5200, 158, 1581, 26, 260, "Output"]
+}, Open  ]],
+Cell[6796, 187, 47, 1, 30, "Input"],
+Cell[6846, 190, 175, 3, 44, "Input"],
+Cell[7024, 195, 98, 2, 30, "Input"],
+Cell[7125, 199, 151, 2, 44, "Input"],
+Cell[7279, 203, 78, 1, 50, "Input"],
+Cell[7360, 206, 157, 2, 44, "Input"],
+Cell[7520, 210, 77, 1, 30, "Input"],
+Cell[7600, 213, 152, 2, 44, "Input"],
+Cell[7755, 217, 68, 1, 30, "Input"],
+
+Cell[CellGroupData[{
+Cell[7848, 222, 248, 4, 44, "Input"],
+Cell[8099, 228, 234, 3, 47, "Output"]
+}, Open  ]],
+Cell[8348, 234, 79, 1, 30, "Input"],
+Cell[8430, 237, 668, 17, 82, "Input"],
+Cell[9101, 256, 179, 3, 50, "Input"]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+
